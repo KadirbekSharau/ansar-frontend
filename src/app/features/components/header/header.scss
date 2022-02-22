@@ -1,0 +1,61 @@
+
+mat-toolbar {
+    display: flex;
+    background-color: rgb(26, 25, 35);
+    height: 90px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+}
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.search{
+    width: 400px;
+    height: 100%;
+    margin:7px;
+    font-size: small;
+    input {
+        height: 20px;
+        width: 400px;
+    }
+}
+
+button {
+    color: white;
+    background-color: rgb(26, 25, 35);
+    margin-right: 10px;
+    border-radius: 20px;
+    line-height: 29px;
+    .button-text {
+        color: white;
+        font-size: 18px;
+    }
+}
+
+mat-divider {
+    color: gray;
+}
+      
+.title {
+    color: white;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 24px;
+}
+
+.buttons {
+    display: flex;
+}
+
+search-bar {
+width: 700px;
+height: 80px;
+}
+
+mat-divider {
+    background-color: rgb(26, 25, 35);
+}

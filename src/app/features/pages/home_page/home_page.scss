@@ -1,0 +1,90 @@
+.black-theme {
+    background-color: rgb(26, 25, 35);
+    height: 850px;
+
+    .black-theme-content {
+        display: flex;
+        flex-direction: column;
+
+        margin-top: 90px;
+
+        .title {
+            margin-top: 100px;
+            margin-left: 250px;
+            color: white;
+            font-size: 36px;
+        }
+
+        .first-row {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+            img {
+                width: 450px;
+                height: 300px;
+                margin: 10px;
+                border-radius: 10px;
+                border-top-left-radius: 10px;
+            }
+        }
+
+        .second-row {
+            display: flex;
+            justify-content: center;
+            img {
+                width: 690px;
+                height: 360px;
+                margin: 10px;
+                border-radius: 10px;
+            }
+
+            .long-image {
+                height: 440px;
+            }
+        }
+    }
+}
+
+.white-theme {
+    background-color: white;
+    height: 650px;
+    margin-top: 120px;
+
+    .white-theme-content {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        img {
+            width: 1400px;
+            height: 600px;
+            margin: 10px;
+            border-radius: 10px;
+            border-top-left-radius: 10px;
+        }
+    }
+}
+
+.tours {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .tours-content {
+        display: flex;
+        margin-top: 25px;
+    }
+}
+
+.title-black {
+    margin-top: 100px;
+    margin-left: 250px;
+    color: black;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+}

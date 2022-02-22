@@ -1,0 +1,92 @@
+<div mat-dialog-content class="content">
+    <span class="title">Crowdy</span>
+    <span class="title">Login</span>
+        <form *ngIf="!verificationMode"
+              class="authorization-form"
+              [formGroup]="form"
+              (ngSubmit)="mode ? onSubmitRegister() : onSubmitLogin()"
+              
+        >
+            <div *ngIf="mode === true">
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Имя</mat-label>
+                    <input type="text" 
+                            matInput  
+                            placeholder="Имя"
+                            id="name"
+                            formControlName="name"/>
+                </mat-form-field>
+                <mat-form-field class="example-full-width" appearance="fill">
+                    <mat-label>Фамилия</mat-label>
+                    <input type="text" 
+                           matInput
+                           placeholder="Фамилия"
+                           id="surname"
+                           formControlName="surname"/>
+                </mat-form-field>
+            </div>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Почта</mat-label>
+                        <input type="email" 
+                                matInput  
+                                placeholder="example@example.com"
+                                id="email"
+                                formControlName="email"/>
+                    </mat-form-field>
+                    <mat-form-field class="example-full-width" appearance="fill">
+                        <mat-label>Пароль</mat-label>
+                        <input type="password" 
+                               matInput
+                               placeholder="a-z&0-9"
+                               id="password"
+                               formControlName="password"/>
+                    </mat-form-field>
+                    <div class="card-action">
+                        
+                        <button mat-stroked-button
+                                type="submit"
+                        >
+                        <a *ngIf="mode === true; else login">Зарегистрироваться</a>
+                        <ng-template #login>Войти</ng-template>
+                        </button>
+                    </div>
+        </form>
+        <form *ngIf="verificationMode"
+        class="authorization-form"
+        [formGroup]="verificationCode"
+        (ngSubmit)="sentVerification()"
+        
+  >
+              <mat-form-field class="example-full-width" appearance="fill">
+                  <mat-label>Код для подтверждения</mat-label>
+                  <input type="text" 
+                         matInput
+                         placeholder="0-9"
+                         id="code"
+                         formControlName="code"/>
+              </mat-form-field>
+              <div class="card-action">
+                  
+
+              </div>
+  </form>
+        <div>
+            <button mat-stroked-button></button>
+            <button mat-stroked-button></button>
+        </div>
+        <div>
+            <button *ngIf="mode == false"
+                    (click)="changeToRegister()"
+                    mat-flat-button
+                    class="registration"
+            >
+                Нет аккаунта?</button>
+            <button *ngIf="mode == true"
+                (click)="changeToLogin()"
+                mat-flat-button
+                class="registration"
+            >
+            Уже есть аккаунт?</button>
+        </div>
+        
+    </div>

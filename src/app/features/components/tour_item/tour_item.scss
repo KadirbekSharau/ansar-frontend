@@ -1,0 +1,19 @@
+:host {
+    margin: 15px
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    mat-icon {
+        color: green;
+        font-size: 22px;
+    }
+} 
+
+img {
+    width: 380px;
+    height: 260px;
+    border-radius: 10px;
+}
