@@ -1,18 +1,15 @@
-<div>
-    <mat-toolbar>
-        <div class="header-content">
-            <div>
-                <a>
-                    <span class="title">Crowdy</span>
-                </a>
-            </div>
-            <search-bar></search-bar>
-            <div class="buttons">
-                    <button mat-button routerLink="/about"><a class="button-text">Туры</a></button>
-                    <button mat-button (click)="openDialog()"><a class="button-text">Sign in</a></button>
-
-            </div>
+<mat-toolbar>
+     <div class="header-content">
+        <div>
+            <a>
+                <span class="title">Crowdy</span>
+            </a>
         </div>
-    </mat-toolbar>
-    <mat-divider></mat-divider>
-</div>
+        <search-bar></search-bar>
+        <div class="buttons">
+            <button mat-button routerLink="/about"><a class="button-text">Сделайте тур</a></button>
+            <button mat-raised-button (click)="openDialog()"><a class="button-text-sign-in">Войти</a></button>
+        </div>
+    </div>
+</mat-toolbar>
+<mat-divider></mat-divider>

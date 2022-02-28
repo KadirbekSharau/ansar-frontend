@@ -52,7 +52,7 @@ export class AuthorizationDialog implements OnInit {
     }
 
     changeToRegister() {
-      this.mode = true;
+      this.mode = !this.mode;
       this.form.reset();
       if (!this.form.get('name') || !this.form.get('surname')) {
         this.form.addControl('name', new FormControl(null, [Validators.required]));
@@ -62,7 +62,7 @@ export class AuthorizationDialog implements OnInit {
     }
 
     changeToLogin() {
-      this.mode = false;
+      this.mode = !this.mode;
       this.form.reset();
       if (this.form.get('name') || this.form.get('surname')) {
         this.form.removeControl('name');

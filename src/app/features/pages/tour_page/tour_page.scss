@@ -9,7 +9,8 @@
     margin-top: 50px;
     display: flex;
     flex-direction: column;
-    width: 62%;
+    margin-left: 180px;
+    margin-right: 180px;
 
     .title {
         margin-top: 20px;
@@ -33,16 +34,16 @@
     .images {
         display: flex;
         img {
-            width: 580px;
-            height: 506px;
+            width: 570px;
+            height: 440px;
             margin: 3px;
         }
 
         .small-images {
             display: flex;
             img {
-                width: 290px;
-                height: 250px;
+                width: 280px;
+                height: 216px;
                 margin: 3px;
             }
         }
@@ -80,5 +81,5 @@ mat-divider {
 }
 
 mat-card {
-    background-color: green;
+    background-color: white;
 }

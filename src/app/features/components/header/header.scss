@@ -13,26 +13,18 @@ mat-toolbar {
     align-items: center;
     width: 100%;
 }
-.search{
-    width: 400px;
-    height: 100%;
-    margin:7px;
-    font-size: small;
-    input {
-        height: 20px;
-        width: 400px;
-    }
-}
 
 button {
-    color: white;
-    background-color: rgb(26, 25, 35);
-    margin-right: 10px;
-    border-radius: 20px;
+    margin-right: 30px;
     line-height: 29px;
+    font-size: 16px;
     .button-text {
         color: white;
-        font-size: 18px;
+        background-color: rgb(26, 25, 35);
+    }
+    .button-text-sign-in {
+        color: rgb(26, 25, 35);
+        background-color: white;
     }
 }
 
@@ -42,19 +34,17 @@ mat-divider {
       
 .title {
     color: white;
-    margin-left: 10px;
+    margin-left: 65px;
     font-weight: bold;
     font-size: 24px;
 }
 
 .buttons {
     display: flex;
+    margin-right: 40px;
 }
 
-search-bar {
-width: 700px;
-height: 80px;
-}
+
 
 mat-divider {
     background-color: rgb(26, 25, 35);

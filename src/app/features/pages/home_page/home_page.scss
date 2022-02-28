@@ -1,6 +1,7 @@
 .black-theme {
     background-color: rgb(26, 25, 35);
     height: 850px;
+    width: 100%;
 
     .black-theme-content {
         display: flex;
@@ -10,7 +11,7 @@
 
         .title {
             margin-top: 100px;
-            margin-left: 250px;
+            margin-left: 80px;
             color: white;
             font-size: 36px;
         }
@@ -18,10 +19,12 @@
         .first-row {
             display: flex;
             justify-content: center;
+            margin-left: 40px;
+            margin-right: 40px;
             margin-top: 10px;
             img {
-                width: 450px;
-                height: 300px;
+                width: 435px;
+                height: 290px;
                 margin: 10px;
                 border-radius: 10px;
                 border-top-left-radius: 10px;
@@ -32,8 +35,8 @@
             display: flex;
             justify-content: center;
             img {
-                width: 690px;
-                height: 360px;
+                width: 663px;
+                height: 350px;
                 margin: 10px;
                 border-radius: 10px;
             }
@@ -55,7 +58,7 @@
         display: flex;
         justify-content: center;
         img {
-            width: 1400px;
+            width: 1350px;
             height: 600px;
             margin: 10px;
             border-radius: 10px;
@@ -76,7 +79,14 @@
 
 .title-black {
     margin-top: 100px;
-    margin-left: 250px;
+    margin-left: 80px;
+    color: black;
+    font-size: 36px;
+    font-weight: 500;
+}
+
+.tour-title {
+    margin-top: 100px;
     color: black;
     font-size: 36px;
     font-weight: 500;

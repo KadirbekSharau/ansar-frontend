@@ -6,6 +6,8 @@ import { HeaderModule } from 'src/app/features/components/header/header_module';
 import { SearchBarModule } from '../../components/search_bar/search_bar_module';
 import { TourItemModule } from '../../components/tour_item/tour_item_module';
 import { AuthorizationDialogModule } from '../../components/authorization_dialog/authorization_dialog_module';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import { MatCardModule } from '@angular/material/card';
 
 
 @NgModule({
@@ -18,7 +20,9 @@ import { AuthorizationDialogModule } from '../../components/authorization_dialog
     SearchBarModule,
     TourItemModule,
     AppRoutingModule,
-    AuthorizationDialogModule
+    AuthorizationDialogModule,
+    MatSidenavModule,
+    MatCardModule
   ],
   exports: [HomePage],
   providers: [],
