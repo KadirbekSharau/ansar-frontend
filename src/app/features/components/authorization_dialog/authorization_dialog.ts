@@ -1,6 +1,9 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
+import { Observable } from 'rxjs';
+import { AuthResponseData } from 'src/app/core/classes/interfaces';
+import { AuthService } from 'src/app/core/services/auth_service';
 
 export interface DialogData {
     animal: string;
@@ -15,14 +18,17 @@ export interface DialogData {
 })
 export class AuthorizationDialog implements OnInit {
 
-    mode = false;
+    isSignupMode = false;
+    isLoading = false;
+    error = null;
     form!: FormGroup;
     verificationCode!: FormGroup;
     verificationMode = false;
     
     constructor(
         public dialogRef: MatDialogRef<AuthorizationDialog>,
-        @Inject(MAT_DIALOG_DATA) public data: DialogData,
+        @Inject(MAT_DIALOG_DATA) private data: DialogData,
+        private authService: AuthService
       ) {}
     
       onNoClick(): void {
@@ -36,40 +42,54 @@ export class AuthorizationDialog implements OnInit {
       });
     }
 
-    onSubmitLogin() {
-      const val = this.form.value;
-      
-      if (val.get('email') && val.get('password')) {
-        this
+    // Login and Registration Handler function
+    onSubmit() {
+      if (!this.form.valid) {
+        console.log('Invalid form');
+        return;
+      }
+      let authObs: Observable<AuthResponseData>;
+      if (!this.isSignupMode) {
+        authObs = this.authService.login(this.form.value.email, this.form.value.password);
+      }
+      else {
+        authObs = this.authService.signup(this.form.value.email, this.form.value.password);
+      }
+      this.isLoading = true;
+      authObs.subscribe(
+        res => {
+          console.log(res);
+          this.isLoading = false;
+        },
+        errorMessage => {
+          console.log(errorMessage);
+          this.error = errorMessage;  
+        },
+      );
+      this.form.reset();
+      if (this.isSignupMode) {
+        this.verificationMode = true;
+        this.verificationCode = new FormGroup({
+          code: new FormControl(null, [Validators.required]),
+        });
       }
     }
 
-    onSubmitRegister() {
-      this.verificationMode = true;
-      this.verificationCode = new FormGroup({
-        code: new FormControl(null, [Validators.required]),
-      });
-    }
 
+
+    // Change to Registration function
     changeToRegister() {
-      this.mode = !this.mode;
+      this.isSignupMode = !this.isSignupMode;
       this.form.reset();
-      if (!this.form.get('name') || !this.form.get('surname')) {
-        this.form.addControl('name', new FormControl(null, [Validators.required]));
-        this.form.addControl('surname', new FormControl(null, [Validators.required]));
-
-      }
     }
 
+    // Change to Login function
     changeToLogin() {
-      this.mode = !this.mode;
+      this.isSignupMode = !this.isSignupMode;
       this.form.reset();
-      if (this.form.get('name') || this.form.get('surname')) {
-        this.form.removeControl('name');
-        this.form.removeControl('surname');
-      }
     }
 
+    // Verification code sending function
     sentVerification() {
       console.log('sent!');
     }

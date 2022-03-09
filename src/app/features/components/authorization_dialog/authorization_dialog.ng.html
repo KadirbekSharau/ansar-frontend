@@ -1,14 +1,18 @@
 <div class="titles">
     <span class="title-crowdy">Crowdy</span>
-    <span class="title">{{mode ? 'Sign up' : 'Login'}}</span>
+    <span class="title">{{isSignupMode ? 'Sign up' : 'Login'}}</span>
 </div>
 <div mat-dialog-content class="content">
-
-        <form *ngIf="!verificationMode"
+        <div *ngIf="error !== null">
+            <a>{{error}}</a>
+        </div>
+        <div *ngIf="isLoading">
+            <loading-spinner></loading-spinner>
+        </div>
+        <form *ngIf="!verificationMode && !isLoading"
               class="authorization-form"
               [formGroup]="form"
-              (ngSubmit)="mode ? onSubmitRegister() : onSubmitLogin()"
-              
+              (ngSubmit)="onSubmit()"
         >
             <a class="form-titles">Email</a>
             <mat-form-field class="example-full-width" appearance="outline">
@@ -30,7 +34,7 @@
                 <button mat-stroked-button
                         type="submit"
                 >
-                <a *ngIf="mode === true; else login">Зарегистрироваться</a>
+                <a *ngIf="isSignupMode === true; else login">Зарегистрироваться</a>
                 <ng-template #login>Войти</ng-template>
                 </button>
             </div>
@@ -39,8 +43,7 @@
         class="authorization-form"
         [formGroup]="verificationCode"
         (ngSubmit)="sentVerification()"
-        
-  >
+        >
               <mat-form-field class="example-full-width" appearance="legacy">
                   <mat-label>Код для подтверждения</mat-label>
                   <input type="text" 
@@ -50,22 +53,25 @@
                          formControlName="code"/>
               </mat-form-field>
               <div class="card-action">
-                  
-
-              </div>
+                <button mat-stroked-button
+                        type="submit"
+                >
+                <a>Зарегистрироваться</a>
+                </button>
+            </div>
   </form>
         <div *ngIf="!verificationMode" class="social-net-buttons">
             <img src="/assets/img/google_button.jpeg" alt="">
             <img src="/assets/img/facebook_button.jpeg" alt="">
         </div>
         
-            <button *ngIf="!mode && !verificationMode"
+            <button *ngIf="!isSignupMode && !verificationMode"
                     (click)="changeToRegister()"
                     mat-flat-button
                     class="registration"
             >
                 Нет аккаунта?</button>
-            <button *ngIf="mode && !verificationMode"
+            <button *ngIf="isSignupMode && !verificationMode"
                 (click)="changeToLogin(); "
                 mat-flat-button
                 class="registration"
