@@ -6,6 +6,7 @@ import { AppComponent } from './app_component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageModule } from '../features/pages/home_page/home_page_module';
 import { TourPageModule } from '../features/pages/tour_page/tour_page_module';
+import { MyTripsPageModule } from '../features/pages/my_trips_page/my_trips_page_module';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TourPageModule } from '../features/pages/tour_page/tour_page_module';
     AppRoutingModule,
     BrowserAnimationsModule,
     HomePageModule,
-    TourPageModule
+    TourPageModule,
+    MyTripsPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

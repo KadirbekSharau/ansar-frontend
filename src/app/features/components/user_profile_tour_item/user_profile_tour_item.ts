@@ -2,13 +2,13 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 
-/* Home Page Tour Item component */
+/* User Page Tour Item component */
 @Component({
-  selector: 'tour-item',
-  templateUrl: './tour_item.ng.html',
-  styleUrls: ['./tour_item.scss']
+  selector: 'user-profile-tour-item',
+  templateUrl: './user_profile_tour_item.ng.html',
+  styleUrls: ['./user_profile_tour_item.scss']
 })
-export class TourItem implements OnInit {
+export class UserProfileTourItem implements OnInit {
 
   constructor(
     private route: ActivatedRoute,

@@ -1,0 +1,52 @@
+.tour-card {
+    max-width: 330px;
+    margin-bottom: 8px;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    margin: 20px;
+    padding: 0;
+
+    .card-content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        a {
+            font-size: 14px;
+        }
+
+        .header-place {
+            display: flex;
+            align-items: center;
+            font-weight: bold;
+        }
+
+        .date {
+            margin-top: 5px;
+            color: gray;
+            font-size: 12px;
+        }
+
+        .guests-number {
+            font-weight: bold;
+        }
+    }
+    .mat-card-image {
+        object-fit: cover;
+        height: 80%;
+        width: 40%;
+        margin: 10px;
+        border-radius: 5px;
+      }
+
+    .ass {
+        display: flex;
+    }
+
+    mat-divider {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        width: 160px;
+        position: relative;
+    }
+  } 

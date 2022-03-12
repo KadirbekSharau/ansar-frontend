@@ -8,7 +8,11 @@
         <search-bar></search-bar>
         <div class="buttons">
             <button mat-button routerLink="/about"><a class="button-text">Сделайте тур</a></button>
-            <button mat-raised-button (click)="openDialog()"><a class="button-text-sign-in">Войти</a></button>
+            <button mat-raised-button (click)="openDialog()"
+                    *ngIf="!isAuthenticated"
+            >
+                <a class="button-text-sign-in">Войти</a>
+            </button>
         </div>
     </div>
 </mat-toolbar>

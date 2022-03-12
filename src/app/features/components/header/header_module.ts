@@ -11,6 +11,7 @@ import { AppRoutingModule } from 'src/app/features/routing/app_routing_module';
 import { MatInputModule } from '@angular/material/input';
 import { SearchBarModule } from '../search_bar/search_bar_module';
 import { AuthorizationDialogModule } from '../authorization_dialog/authorization_dialog_module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { AuthorizationDialogModule } from '../authorization_dialog/authorization
     AuthorizationDialogModule,
     MatDividerModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   exports: [
       Header,
