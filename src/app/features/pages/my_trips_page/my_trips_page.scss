@@ -1,14 +1,19 @@
-.cancelled-trips {
+.content {
+    margin-top: 50px;
+}
+
+.profile-info {
+    margin-top: 20px;
+    margin-left: 60px;
+}
+
+.trips {
     display: flex;
     flex-direction: column;
-    a {
-        font-size: 24px;
-    }
+    margin-left: 60px;
+    margin-top: 30px;
+}
 
-    .content {
-        height: 300px;
-        mat-grid-tile{
-            height: 200px;
-        }
-    }
+a {
+    font-size: 24px;
 }

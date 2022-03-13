@@ -12,6 +12,8 @@ import { MatInputModule } from '@angular/material/input';
 import { SearchBarModule } from '../search_bar/search_bar_module';
 import { AuthorizationDialogModule } from '../authorization_dialog/authorization_dialog_module';
 import { HttpClientModule } from '@angular/common/http';
+import {MatMenuModule} from '@angular/material/menu';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { HttpClientModule } from '@angular/common/http';
     AuthorizationDialogModule,
     MatDividerModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    MatMenuModule
   ],
   exports: [
       Header,

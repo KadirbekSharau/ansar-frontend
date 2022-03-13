@@ -2,7 +2,8 @@
      <div class="header-content">
         <div>
             <a>
-                <span class="title">Crowdy</span>
+                <span (click)="navigateToHome()"
+                    class="title">Crowdy</span>
             </a>
         </div>
         <search-bar></search-bar>
@@ -13,6 +14,26 @@
             >
                 <a class="button-text-sign-in">Войти</a>
             </button>
+            <button style="border-radius: 20px;" mat-raised-button
+                    *ngIf="!isAuthenticated"
+                    [matMenuTriggerFor]="menu"
+            >
+                <mat-icon>menu</mat-icon>
+                <mat-icon>person</mat-icon>
+            </button>
+            <mat-menu #menu="matMenu"
+                      xPosition="before">
+                <button routerLink="/profile"
+                        mat-menu-item>
+                        Профиль
+                </button>
+                <button routerLink="/my-trips"
+                        mat-menu-item>Мои поездки</button>
+                <button routerLink="/organizer"
+                        mat-menu-item>Я - хост!
+                </button>
+                <button mat-menu-item>Выйти</button>
+            </mat-menu>
         </div>
     </div>
 </mat-toolbar>

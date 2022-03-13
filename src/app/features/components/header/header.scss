@@ -42,9 +42,11 @@ mat-divider {
 .buttons {
     display: flex;
     margin-right: 40px;
+    ::ng-deep .mat-menu-panel {
+        padding: 0 10px!important;
+        width: 300px;
+      }
 }
-
-
 
 mat-divider {
     background-color: rgb(26, 25, 35);

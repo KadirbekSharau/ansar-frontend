@@ -18,7 +18,9 @@ export class Header implements OnInit, OnDestroy {
   name!: string;
   private userSub!: Subscription;
 
-  constructor(public dialog: MatDialog, private authService: AuthService) {}
+  constructor(public dialog: MatDialog, 
+              private authService: AuthService,
+              private router: Router) {}
 
   openDialog(): void {
     console.log('Hey');
@@ -36,6 +38,10 @@ export class Header implements OnInit, OnDestroy {
     this.userSub = this.authService.user.subscribe(user => {
       this.isAuthenticated = !!user;
     });
+  }
+
+  navigateToHome() {
+    this.router.navigate(['../']);
   }
 
   ngOnDestroy() {
