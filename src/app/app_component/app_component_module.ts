@@ -9,6 +9,8 @@ import { TourPageModule } from '../features/pages/tour_page/tour_page_module';
 import { MyTripsPageModule } from '../features/pages/my_trips_page/my_trips_page_module';
 import { ProfilePageModule } from '../features/pages/profile_page/profile_page_module';
 import { OrganizerPageModule } from '../features/pages/organizer_page/organizer_page_module';
+import { HostIntroPageModule } from '../features/pages/host_intro_page/host_intro_page_module';
+import { HostCreateIntroPageeModule } from '../features/pages/host_create_intro_page/host_create_intro_page.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { OrganizerPageModule } from '../features/pages/organizer_page/organizer_
     TourPageModule,
     MyTripsPageModule,
     ProfilePageModule,
-    OrganizerPageModule
+    OrganizerPageModule,
+    HostIntroPageModule,
+    HostCreateIntroPageeModule
   ],
   providers: [],
   bootstrap: [AppComponent]

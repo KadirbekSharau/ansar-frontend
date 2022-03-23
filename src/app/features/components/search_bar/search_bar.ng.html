@@ -1,19 +1,42 @@
 <div class="search">
-    <mat-icon>search</mat-icon>
-    <form class="search">
-          <div class="field">
-            <input type="name" 
-                    matInput  
-                    placeholder="Место">
-            <mat-divider [vertical]="true"></mat-divider>
-            <input type="name" 
-                    matInput  
-                    placeholder="Дата">
-            <mat-divider [vertical]="true"></mat-divider>
-            <input type="name" 
-                    matInput  
-                    placeholder="Гостей">
-          </div>
-    </form>
+        <form class="search">
+                <button class="search-button"
+                        mat-fab color="accent">
+                        <mat-icon>
+                                search
+                        </mat-icon>
+                </button>
+                <div class="field">
+                        <div class="place">
+                                <a>Место</a>
+                                <input type="name" 
+                                       matInput
+                                       [matAutocomplete]="auto">
+                                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                                          {{option}}
+                                        </mat-option>
+                                </mat-autocomplete>
+                        </div>
+                        <mat-divider [vertical]="true"></mat-divider>
+                        <div class="place">
+                                <a>Дата</a>
+                                <div class="field">
+                                        <input matInput
+                                               [matDatepicker]="picker">
+                                                <mat-datepicker-toggle matSuffix [for]="picker">
+                                                        <mat-icon matDatepickerToggleIcon>date</mat-icon>
+                                                </mat-datepicker-toggle>
+                                                <mat-datepicker #picker></mat-datepicker>
+                                </div>
+                        </div>
+                        <mat-divider [vertical]="true"></mat-divider>
+                        <div class="place">
+                                <a>Гостей</a>
+                                <input type="number" 
+                                        matInput>
+                        </div>
+                </div>
+        </form>
 </div>
   

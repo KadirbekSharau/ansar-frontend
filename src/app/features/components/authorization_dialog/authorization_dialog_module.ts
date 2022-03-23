@@ -11,7 +11,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { AuthorizationDialog } from './authorization_dialog';
 import { HttpClientModule } from '@angular/common/http';
-import { LoadingSpinnerModule } from '../loading_spinner/loading_spinner_module';
 
 @NgModule({
   declarations: [
@@ -30,7 +29,6 @@ import { LoadingSpinnerModule } from '../loading_spinner/loading_spinner_module'
     FormsModule,
     MatFormFieldModule,
     HttpClientModule,
-    LoadingSpinnerModule
   ],
   exports: [
     AuthorizationDialog,
