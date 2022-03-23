@@ -11,6 +11,7 @@ import { ProfilePageModule } from '../features/pages/profile_page/profile_page_m
 import { OrganizerPageModule } from '../features/pages/organizer_page/organizer_page_module';
 import { HostIntroPageModule } from '../features/pages/host_intro_page/host_intro_page_module';
 import { HostCreateIntroPageeModule } from '../features/pages/host_create_intro_page/host_create_intro_page.module';
+import { HostCreateTripPageModule } from '../features/pages/host_create_trip_page/host_create_trip_page_module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { HostCreateIntroPageeModule } from '../features/pages/host_create_intro_
     ProfilePageModule,
     OrganizerPageModule,
     HostIntroPageModule,
-    HostCreateIntroPageeModule
+    HostCreateIntroPageeModule,
+    HostCreateTripPageModule
   ],
   providers: [],
   bootstrap: [AppComponent]
