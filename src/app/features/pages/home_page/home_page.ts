@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 /* Home page component */
 @Component({
   selector: 'home-page',

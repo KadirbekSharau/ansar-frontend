@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from 'src/app/features/routing/app_routing_module';
+import { AppRoutingModule } from 'src/app/app_component/app_routing_module';
 import { HeaderModule } from 'src/app/features/components/header/header_module';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';

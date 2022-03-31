@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 /* Profile page component */
 @Component({
   selector: 'profile-page',

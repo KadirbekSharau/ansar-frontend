@@ -2,7 +2,7 @@ import { Component, OnInit, Inject } from '@angular/core';
 import { Form, FormControl, FormGroup, Validators } from '@angular/forms';
 import {MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { Observable } from 'rxjs';
-import { AuthResponseData } from 'src/app/core/classes/interfaces';
+import { AuthResponseData } from 'src/app/core/interfaces/interfaces';
 import { AuthService } from 'src/app/core/services/auth_service';
 
 export interface DialogData {

@@ -4,7 +4,6 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Subscription } from 'rxjs';
 import { AuthService } from 'src/app/core/services/auth_service';
 import { AuthorizationDialog } from '../authorization_dialog/authorization_dialog';
-//import { AuthorizationService } from 'src/app/core/services/authorization_service';
 
 /* Header component */
 @Component({
@@ -46,5 +45,9 @@ export class Header implements OnInit, OnDestroy {
 
   ngOnDestroy() {
     this.userSub.unsubscribe();
+  }
+
+  logOut() {
+    console.log("Logged out!");
   }
 }

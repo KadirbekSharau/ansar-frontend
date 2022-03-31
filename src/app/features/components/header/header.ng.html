@@ -3,12 +3,11 @@
         <div>
             <a>
                 <span (click)="navigateToHome()"
-                    class="title">Crowdy</span>
+                    class="title">Example</span>
             </a>
         </div>
         <search-bar></search-bar>
         <div class="buttons">
-            <button mat-button routerLink="/host-intro"><a class="button-text">Сделайте тур</a></button>
             <button mat-raised-button (click)="openDialog()"
                     *ngIf="!isAuthenticated"
             >
@@ -27,12 +26,7 @@
                         mat-menu-item>
                         Профиль
                 </button>
-                <button routerLink="/my-trips"
-                        mat-menu-item>Мои поездки</button>
-                <button routerLink="/organizer"
-                        mat-menu-item>Я - хост!
-                </button>
-                <button mat-menu-item>Выйти</button>
+                <button (click)="logOut()" mat-menu-item>Выйти</button>
             </mat-menu>
         </div>
     </div>

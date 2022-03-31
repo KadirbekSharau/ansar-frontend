@@ -5,7 +5,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
-import { AppRoutingModule } from 'src/app/features/routing/app_routing_module';
+import { AppRoutingModule } from 'src/app/app_component/app_routing_module';
 import { MatInputModule } from '@angular/material/input';
 import { SearchBar } from './search_bar';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';

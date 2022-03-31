@@ -7,7 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDividerModule } from '@angular/material/divider';
 import { Header } from './header';
-import { AppRoutingModule } from 'src/app/features/routing/app_routing_module';
+import { AppRoutingModule } from 'src/app/app_component/app_routing_module';
 import { MatInputModule } from '@angular/material/input';
 import { SearchBarModule } from '../search_bar/search_bar_module';
 import { AuthorizationDialogModule } from '../authorization_dialog/authorization_dialog_module';
