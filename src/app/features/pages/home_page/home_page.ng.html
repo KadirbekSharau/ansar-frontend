@@ -1,6 +1,18 @@
-<div>
+<div class="content">
     <header></header>
-        <div class="black-theme">
+        <div class="books">
+            <div *ngFor="let item of [1, 2, 3, 4]">
+                <book-item></book-item>
+            </div>
+            <div class="books" *ngFor="let item of [1, 2, 3, 4]">
+                <book-item></book-item>
+            </div>
+            <div class="books" *ngFor="let item of [1, 2, 3, 4]">
+                <book-item></book-item>
+            </div>
+            <div class="books" *ngFor="let item of [1, 2, 3, 4]">
+                <book-item></book-item>
+            </div>
         </div>
 </div>
 

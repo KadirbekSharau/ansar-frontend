@@ -8,33 +8,15 @@
                 </button>
                 <div class="field">
                         <div class="place">
-                                <a>Example 1</a>
                                 <input type="name" 
                                        matInput
+                                       placeholder="Search books"
                                        [matAutocomplete]="auto">
                                 <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
                                         <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
                                           {{option}}
                                         </mat-option>
                                 </mat-autocomplete>
-                        </div>
-                        <mat-divider [vertical]="true"></mat-divider>
-                        <div class="place">
-                                <a>Example 2</a>
-                                <div class="field">
-                                        <input matInput
-                                               [matDatepicker]="picker">
-                                                <mat-datepicker-toggle matSuffix [for]="picker">
-                                                        <mat-icon matDatepickerToggleIcon>date</mat-icon>
-                                                </mat-datepicker-toggle>
-                                                <mat-datepicker #picker></mat-datepicker>
-                                </div>
-                        </div>
-                        <mat-divider [vertical]="true"></mat-divider>
-                        <div class="place">
-                                <a>Example 3</a>
-                                <input type="number" 
-                                        matInput>
                         </div>
                 </div>
         </form>

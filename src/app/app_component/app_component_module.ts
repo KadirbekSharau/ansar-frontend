@@ -7,6 +7,7 @@ import { AppComponent } from './app_component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HomePageModule } from '../features/pages/home_page/home_page_module';
 import { ProfilePageModule } from '../features/pages/profile_page/profile_page_module';
+import { BookPageModule } from '../features/pages/book_page/book_page_module';
 
 @NgModule({
   declarations: [
@@ -18,6 +19,7 @@ import { ProfilePageModule } from '../features/pages/profile_page/profile_page_m
     BrowserAnimationsModule,
     HomePageModule,
     ProfilePageModule,
+    BookPageModule,
     RouterModule,
   ],
   providers: [],

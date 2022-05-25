@@ -1,25 +1,19 @@
-.black-theme {
-    background-color: white;
-
-    .black-theme-content {
-        display: flex;
-        flex-direction: column;
-
-        margin-top: 0px;
-
-        .title {
-            margin-top: 150px;
-            margin-left: 80px;
-            color: white;
-            font-size: 36px;
-        }
-
-    }
+.content {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 header {
-    position: fixed;
+
     top: 0px;
     left: 0px;
     right: 0px;
+}
+
+.books {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
