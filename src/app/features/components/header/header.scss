@@ -1,7 +1,7 @@
 
 mat-toolbar {
     display: flex;
-    background-color: rgb(24, 124, 11);
+    background-color: rgb(26, 25, 35);
     height: 70px;
     width: 100%;
     align-items: center;
@@ -45,6 +45,11 @@ mat-divider {
     ::ng-deep .mat-menu-panel {
         padding: 0 10px!important;
         width: 300px;
+      }
+
+      .city {
+          color: white;
+          background-color: rgb(26, 25, 35);
       }
 }
 

@@ -8,26 +8,33 @@
         </div>
         <search-bar></search-bar>
         <div class="buttons">
+            <button class="city" style="border-radius: 20px;" mat-raised-button
+            *ngIf="!isAuthenticated"
+            [matMenuTriggerFor]="menu"
+        >
+            Город
+        </button>
+        <mat-menu #menu="matMenu"
+                xPosition="before">
+            <button routerLink="/profile"
+                    mat-menu-item>
+                    Алматы
+            </button>
+            <button routerLink="/profile"
+                mat-menu-item>
+                Астана
+            </button>
+            <button routerLink="/profile"
+                mat-menu-item>
+                Актау
+            </button>
+            <button (click)="logOut()" mat-menu-item>Выйти</button>
+        </mat-menu>
             <button mat-raised-button (click)="openDialog()"
                     *ngIf="!isAuthenticated"
             >
                 <a class="button-text-sign-in">Войти</a>
             </button>
-            <button style="border-radius: 20px;" mat-raised-button
-                    *ngIf="!isAuthenticated"
-                    [matMenuTriggerFor]="menu"
-            >
-                <mat-icon>menu</mat-icon>
-                <mat-icon>person</mat-icon>
-            </button>
-            <mat-menu #menu="matMenu"
-                      xPosition="before">
-                <button routerLink="/profile"
-                        mat-menu-item>
-                        Профиль
-                </button>
-                <button (click)="logOut()" mat-menu-item>Выйти</button>
-            </mat-menu>
         </div>
     </div>
 </mat-toolbar>

@@ -1,11 +1,11 @@
 <div class="search">
         <form class="search">
-                <button class="search-button"
-                        mat-fab color="accent">
+                <!-- <button class="search-button"
+                        mat-fab color="accent"> -->
                         <mat-icon>
                                 search
                         </mat-icon>
-                </button>
+                <!-- </button> -->
                 <div class="field">
                         <div class="place">
                                 <input type="name" 
@@ -13,9 +13,6 @@
                                        placeholder="Search books"
                                        [matAutocomplete]="auto">
                                 <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                                        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
-                                          {{option}}
-                                        </mat-option>
                                 </mat-autocomplete>
                         </div>
                 </div>
